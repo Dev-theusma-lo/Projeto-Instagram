@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: #3c96ed
+}
+
+body {
+    --background: #f2f2f2;
+    --white: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    height: 104%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.left{
+    background-image: url("assets/foto-main.png");
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.right {
+    padding-left: 20px;
+}
+
+.login-panel{
+    background-color: var(--white);
+    border: 1px solid #e6e6e6;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+.logo img{
+    width:155px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+input[type="password"], input[type="text"]{
+    background-color: var(--white);
+    border: 1px solid RGB(236, 234, 234);
+    height: 35px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    width: 320px;
+}
+
+input[type="password"]::placeholder, input[type="text"]::placeholder {
+    color: rgb(165,164 ,164 );
+}
+
+input[type=password]:focus, input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #a1a1a1;
+}
+
+input[type="submit"] {
+    width:320px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: #3c96ed;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.infobox {
+    background-color: var(--white);
+    height: 50px;
+    border: 1px solid RGB(236, 234, 234);
+    margin: 10px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infobox p {
+    user-select: none;
+    font-size: 12px;
+     color: rgb(165,164 ,164 );
+}
+
+.infobox p a{
+    font-weight: bold;
+    user-select: none;
+}
+
+.get-app-panel {
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.app-buttons {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.app-buttons img {
+    height: 36px;
+    padding: 0 2px;
+}
+
+footer {
+    text-align: center;
+    height: 50px;
+    margin-top: -80px;
+}
+
+footer a {
+    color: black;
+    margin-right: 18px;
+}
+
+.text-small{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+
+
+
+/* Página Signup - cadastro */
+
+
+
+
+.container-signup {
+    margin: 0 auto;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.signup-panel{
+    background-color: var(--white);
+    border: 1px solid #e6e6e6;
+    padding: 20px 0;
+    text-align: center;
+    height: 50%;
+}
+
+.message {
+    margin: 10px 70px;
+}
+
+.message span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold ;
+    color: #8e8e8e
+}
+
+.facebook-button {
+    width: 320px;
+    height: 35px;
+    background-color: #0095f6;
+    color: var(--white);
+    border-radius: 4px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.divisor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.line{
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 35%;
+}
+
+.divisor-tag {
+    font-weight: bold;
+    margin: 0 2.5%;
+    color: #8e8e8e;
+    user-select: none;
+}
+
+
+
+
+
+/* Responsividade */
+
+
+
+
+@media (max-width: 700px) {
+   .left {
+        display: none;
+   }
+
+    .container {
+          width: 70%;
+    }
+
+    .right {
+        padding-left: 0;
+    }
+
+    .login-panel{
+        border-radius: 5px;
+    }
+
+    .infobox{
+        border-radius: 5px; 
+    }
+
+    .app-buttons {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .container{
+        width: 90%;
+    }
+
+    .container-signup {
+        width: 90%;
+    }
+
+     .app-buttons img {
+        height: 30px;
+    }
+
+    .message {
+        margin: 10px 35px;
+    }
+
+    .message span {
+        font-size: 15px;
+    }
+
+    .facebook-button {
+        width: 80%;
+    }
+
+    input[type="password"], input[type="text"]{
+        width: 80%;
+    }
+
+     input[type="submit"] {
+        width: 80%;
+    }
+
+
+
+}
